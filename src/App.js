@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import LevelOne from './pages/LevelOne';
+import LevelTwo from './pages/LevelTwo';
+import LevelThree from './pages/LevelThree';
+import LevelFour from './pages/LevelFour';
+import TheGame from './pages/TheGame';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/game" element={<TheGame />} />
+            <Route path="/level-one" element={<LevelOne />} />
+            <Route path="/level-two" element={<LevelTwo />} />
+            <Route path="/level-three" element={<LevelThree />} />
+            <Route path="/level-four" element={<LevelFour />} />
+        </Routes>
+    );
 }
 
 export default App;

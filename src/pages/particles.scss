@@ -1,0 +1,88 @@
+// https://codepen.io/thebabydino/pen/vgXrZm?editors=1100
+
+$d: 4px;
+
+.particle {
+    position: absolute;
+    width: $d;
+    height: $d;
+    animation: shoot 3s ease-out infinite;
+    animation-name: shoot, fade;
+
+    @for $i from 0 to 400 {
+        $t: (1 + 0.01 * random(100)) * 1s;
+
+        &:nth-child(#{$i + 1}) {
+            transform: translate(random(100) * 1vw, random(100) * 1vh);
+            background: hsl(random(360), 100%, 65%);
+            animation-duration: $t;
+            animation-delay: -0.01 * random(100) * $t;
+        }
+    }
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(50vw, 50vh);
+    }
+}
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+:root {
+    --color-primary: #ff4b00;
+    --color-subtle: #b0b0b0;
+}
+
+input[type='radio'] {
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    border: 2px solid var(--color-subtle);
+    margin: 0 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline-offset: 5px;
+    outline-color: var(--color-subtle);
+
+    &:disabled {
+        opacity: 0.7;
+        background: var(--color-subtle);
+        cursor: not-allowed;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+    }
+
+    &:checked:after {
+        transform: scale(1);
+    }
+}
+
+input[type='radio'] {
+    border-radius: 20px;
+
+    &:after {
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+    }
+
+    &:checked {
+        border-color: var(--color-primary);
+
+        &:after {
+            background-color: var(--color-primary);
+        }
+    }
+}

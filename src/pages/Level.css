@@ -1,0 +1,11 @@
+.loser {
+    cursor: url('../images/roj_50.png'), auto;
+}
+
+.winner {
+    cursor: url('../images/roj_win.png'), auto;
+}
+
+.bg-orange-4000 {
+    background-image: url(../images/clown_dance.gif);
+}
