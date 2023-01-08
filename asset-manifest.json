@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hbdroj/static/css/main.27213a52.css",
+    "main.css": "/hbdroj/static/css/main.b9f0e9c7.css",
     "main.js": "/hbdroj/static/js/main.0183571b.js",
     "static/media/troll_song.mp3": "/hbdroj/static/media/troll_song.37c206c244791cfa631b.mp3",
     "static/media/roj2.png": "/hbdroj/static/media/roj2.64f3d16cf3de40e4b79f.png",
@@ -12,11 +12,11 @@
     "static/media/TROLL.JPG": "/hbdroj/static/media/TROLL.157e719c7fa659793492.JPG",
     "static/media/clown_dance.gif": "/hbdroj/static/media/clown_dance.c5f11d9a9634e398c97c.gif",
     "index.html": "/hbdroj/index.html",
-    "main.27213a52.css.map": "/hbdroj/static/css/main.27213a52.css.map",
+    "main.b9f0e9c7.css.map": "/hbdroj/static/css/main.b9f0e9c7.css.map",
     "main.0183571b.js.map": "/hbdroj/static/js/main.0183571b.js.map"
   },
   "entrypoints": [
-    "static/css/main.27213a52.css",
+    "static/css/main.b9f0e9c7.css",
     "static/js/main.0183571b.js"
   ]
 }
